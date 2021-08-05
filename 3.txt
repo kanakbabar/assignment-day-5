@@ -1,0 +1,72 @@
+1)factorial-
+
+#!/bin/bash -x
+
+# shell script for factorial of a number
+# factorial using for loop
+
+echo "Enter a number"
+
+# Read the number
+read num
+
+fact=1
+for((i=2;i<=num;i++))
+{
+ fact=$((fact * i))
+}
+echo $fact
+
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./fact.sh
++ echo 'Enter a number'
+Enter a number
++ read num
+1
++ fact=1
++ (( i=2 ))
++ (( i<=num ))
++ echo 1
+1
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./fact.sh
++ echo 'Enter a number'
+Enter a number
++ read num
+2
++ fact=1
++ (( i=2 ))
++ (( i<=num ))
++ fact=2
++ (( i++ ))
++ (( i<=num ))
++ echo 2
+2
+
+
+2) prime number -
+
+
+#!/bin/bash -x
+
+echo -e "Enter Number : \c"
+read n
+for((i=2; i=$n/2; i++))
+do
+  ans=$(( n%i ))
+  if [ $ans -eq 0 ]
+  then
+   echo "$n is not a prime number."
+  fi
+done
+echo "$n is a prime number."
+
+
++ (( i++ ))
++ (( i=8/2 ))
++ ans=0
++ '[' 0 -eq 0 ']'
++ echo '8 is not a prime number.'
+8 is not a prime number.
