@@ -1,0 +1,261 @@
+1) getting head and tail -
+
+#!/bin/bash -x
+
+random=$(($RANDOM%2))
+if [ $random -eq 1 ]
+then
+     echo "head"
+else
+      echo "tail"
+fi
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./ht.sh
++ random=1
++ '[' 1 -eq 1 ']'
++ echo head
+head
+
+
+2) single digit number in word -
+
+
+#!/bin/bash -x
+
+read -p "enter number" x
+case "$x" in
+       0) echo "$x : zero";;
+       1) echo "$x : one";;
+       2) echo "$x : two";;
+       3) echo "$x : three";;
+       4) echo "$x : four";;
+       5) echo "$x : five";;
+       6) echo "$x : six";;
+       7) echo "$x : seven";;
+       8) echo "$x : eight";;
+       9) echo "$x : nine";;
+ esac
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./nn.sh
++ read -p 'enter number' x
+enter number0
++ case "$x" in
++ echo '0 : zero'
+0 : zero
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./nn.sh
++ read -p 'enter number' x
+enter number1
++ case "$x" in
++ echo '1 : one'
+1 : one
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./nn.sh
++ read -p 'enter number' x
+enter number2
++ case "$x" in
++ echo '2 : two'
+2 : two
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./nn.sh
++ read -p 'enter number' x
+enter number3
++ case "$x" in
++ echo '3 : three'
+3 : three
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./nn.sh
++ read -p 'enter number' x
+enter number4
++ case "$x" in
++ echo '4 : four'
+4 : four
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./nn.sh
++ read -p 'enter number' x
+enter number5
++ case "$x" in
++ echo '5 : five'
+5 : five
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./nn.sh
++ read -p 'enter number' x
+enter number6
++ case "$x" in
++ echo '6 : six'
+6 : six
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./nn.sh
++ read -p 'enter number' x
+enter number7
++ case "$x" in
++ echo '7 : seven'
+7 : seven
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./nn.sh
++ read -p 'enter number' x
+enter number8
++ case "$x" in
++ echo '8 : eight'
+8 : eight
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./nn.sh
++ read -p 'enter number' x
+enter number9
++ case "$x" in
++ echo '9 : nine'
+9 : nine
+
+
+3) week name -
+
+
+#!/bin/bash -x
+
+x=$((RANDOM%9))
+if [ $x -eq 1 ]
+then
+    echo "monday"
+elif [ $x -eq 2 ]
+then
+    echo "tuesday"
+elif [ $x -eq 3 ]
+then
+    echo "wednesday"
+elif [ $x -eq 4 ]
+then
+    echo "thursday"
+elif [ $x -eq 5 ]
+then
+    echo "friday"
+elif [ $x -eq 6 ]
+then
+    echo "saturday"
+elif [ $x -eq 7 ]
+then
+     echo "sunday"
+else
+     echo "i am sorry"
+fi
+
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./week.sh
++ x=7
++ '[' 7 -eq 1 ']'
++ '[' 7 -eq 2 ']'
++ '[' 7 -eq 3 ']'
++ '[' 7 -eq 4 ']'
++ '[' 7 -eq 5 ']'
++ '[' 7 -eq 6 ']'
++ '[' 7 -eq 7 ']'
++ echo sunday
+sunday
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./week.sh
++ x=3
++ '[' 3 -eq 1 ']'
++ '[' 3 -eq 2 ']'
++ '[' 3 -eq 3 ']'
++ echo wednesday
+wednesday
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./week.sh
++ x=4
++ '[' 4 -eq 1 ']'
++ '[' 4 -eq 2 ']'
++ '[' 4 -eq 3 ']'
++ '[' 4 -eq 4 ']'
++ echo thursday
+thursday
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./week.sh
++ x=2
++ '[' 2 -eq 1 ']'
++ '[' 2 -eq 2 ']'
++ echo tuesday
+tuesday
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./week.sh
++ x=3
++ '[' 3 -eq 1 ']'
++ '[' 3 -eq 2 ']'
++ '[' 3 -eq 3 ']'
++ echo wednesday
+wednesday
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./week.sh
++ x=1
++ '[' 1 -eq 1 ']'
++ echo monday
+monday
+
+
+4) arithmatic operation -
+
+#!/bin/bash -x
+
+a=555;
+b=624;
+c=357;
+j=$(($a+$b*$c))
+k=$(($a*$b+$c))
+l=$(($c+$a/$b))
+m=$(($a/$b+$c))
+
+echo $j
+echo $k
+echo $l
+echo $m
+
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./ar.sh
++ a=555
++ b=624
++ c=357
++ j=223323
++ k=346677
++ l=357
++ m=357
++ echo 223323
+223323
++ echo 346677
+346677
++ echo 357
+357
++ echo 357
+357
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./ar.sh
++ a=555
++ b=624
++ c=357
++ j=223323
++ k=346677
++ l=357
++ m=357
++ echo 223323
+223323
++ echo 346677
+346677
++ echo 357
+357
++ echo 357
+357
