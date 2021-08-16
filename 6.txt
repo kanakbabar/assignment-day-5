@@ -1,0 +1,139 @@
+1)
+
+#!/bin/bash -x
+echo "hello"
+if [ $? -eq 0 ]
+then
+ echo "hello was sucessfull"
+else
+ echo "hello was unsucessfull"
+fi
+ls
+if [ $? -eq 0 ]
+then
+   echo "ls command was sucesfull"
+else
+   echo "ls was unsucessfull"
+fi
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./command.sh
++ echo hello
+hello
++ '[' 0 -eq 0 ']'
++ echo 'hello was sucessfull'
+hello was sucessfull
++ ls
+ 10b
+ 10na.txt
+ 10name.txt
+'3D Objects'
+ 9
+'='
+ AppData
+'Application Data'
+ Contacts
+ Cookies
+ DN.sh
+ Desktop
+ Documents
+ Downloads
+ Favorites
+ File
+ Helloworld.java
+ IntelGraphicsProfiles
+ Links
+'Local Settings'
+ Music
+'My Documents'
+ NTUSER.DAT
+ NTUSER.DAT{53b39e87-18c4-11ea-a811-000d3aa4692b}.TxR.0.regtrans-ms
+ NTUSER.DAT{53b39e87-18c4-11ea-a811-000d3aa4692b}.TxR.1.regtrans-ms
+ NTUSER.DAT{53b39e87-18c4-11ea-a811-000d3aa4692b}.TxR.2.regtrans-ms
+ NTUSER.DAT{53b39e87-18c4-11ea-a811-000d3aa4692b}.TxR.blf
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms
+ NetHood
+'New Buffer'
+ OneDrive
+ Pictures
+ PrintHood
+ RDN
+ Recent
+'Saved Games'
+ Searches
+ SendTo
+'Start Menu'
+ Temp1
+ Templates
+ Terminal_command.txt
+ Terminal_commands
+ Videos
+ a.txt
+ aad.sh
+
+
+
+
+
+2)
+#!/bin/bash -x
+
+if [ -z "$usersecret" ]
+then
+  echo "not defined"
+      export usersecret="dH34xJaa23"
+      echo $usersecret
+else
+    echo "defined"
+fi
+
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./setenvironment.sh
++ '[' -z '' ']'
++ echo 'not defined'
+not defined
++ export usersecret=dH34xJaa23
++ usersecret=dH34xJaa23
++ echo dH34xJaa23
+dH34xJaa23
+
+
+
+
+3)
+#!/bin/bash -x
+
+if [ -e "abc/" ]
+then
+   echo "folder is present"
+else
+    echo "folder is not oresent"
+fi
+
+
+mkdir abc
+if [ -e "abc/" ]
+then
+    echo "folder iscreated"
+else
+    echo "folder is not created"
+fi
+
+
+
+
+KANAK@LAPTOP-90DM2654 MINGW64 ~ (master)
+$ ./creat.sh
++ '[' -e abc/ ']'
++ echo 'folder is present'
+folder is present
++ mkdir abc
+mkdir: cannot create directory ‘abc’: File exists
++ '[' -e abc/ ']'
++ echo 'folder iscreated'
+folder iscreated
+
+s
+
